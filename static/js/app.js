@@ -1,6 +1,5 @@
 function buildMetadata(sample) {
    // clear data 
-  METATABLE.html(""); 
 
   d3.json(`/metadata/${sample}`).then((data) => {
 
@@ -8,7 +7,8 @@ function buildMetadata(sample) {
 
      // Use `d3.json` to fetch the metadata for a sample
     var METATABLE = d3.select("#sample-metadata"); 
-    
+      METATABLE.html(""); 
+
 
     //add each key/value pair ot panel 
 
